@@ -1,0 +1,413 @@
+/* ───────────────────────────────────────────────────────────────────────────── */
+/*  SIDEBAR LAYOUT – Dark Glassmorphic SaaS Theme (Updated)                     */
+/* ───────────────────────────────────────────────────────────────────────────── */
+
+.sidebar-layout {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    user-select: none;
+    background: #0a0b0f;
+}
+
+/* Sidebar container */
+.sidebar {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 2px 0 20px rgba(0,0,0,0.3);
+}
+
+/* Inner glass panel */
+.sidebar-inner {
+    margin-left: 12px;
+		margin-right: 12px;
+    background: rgba(15, 17, 20, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: calc(80% - 24px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+/* Tabs at the top */
+.sidebar-tabs {
+    display: flex;
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-shrink: 0;
+    padding: 4px;
+    gap: 4px;
+}
+
+.sidebar-tab {
+    padding: 10px 16px;
+    background: transparent;
+    color: rgba(255,255,255,0.6);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar-tab:hover {
+    color: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.05);
+}
+
+.sidebar-tab.active {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Scrollable menu area */
+.sidebar-menu-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 12px;
+}
+
+/* Root list spacing */
+.menu-root-list {
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ────────────────────── MAIN PANEL (each top-level menu) ────────────────────── */
+.menu-panel {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    margin: 6px 0;
+}
+
+.menu-panel-header {
+    padding: 12px 14px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.85);
+    transition: all 0.2s ease;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.menu-panel-header:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.menu-panel-header.selected {
+    background: #fff;
+    color: #0a0b0f;
+    border-radius: 8px;
+    border-bottom: none;
+    margin: 4px;
+    padding: 10px 12px;
+}
+
+.menu-panel-header.selected .menu-panel-icon,
+.menu-panel-header.selected .menu-panel-chevron {
+    color: #0a0b0f;
+    opacity: 1;
+}
+
+/* Active panel outline (when not selected) */
+.menu-panel.active-panel {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.menu-panel-icon {
+    font-size: 17px;
+    opacity: 0.9;
+    flex-shrink: 0;
+}
+
+.menu-panel-title {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.menu-panel-chevron {
+    font-size: 15px;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+/* Body of the panel */
+.menu-panel-body {
+    padding: 8px;
+    background: transparent;
+}
+
+/* ────────────────────── Items inside panels ────────────────────── */
+.menu-panel-item {
+    padding: 9px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    background: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 6px;
+    margin: 2px 4px;
+}
+
+.menu-panel-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.menu-panel-item.selected {
+    background: #fff;
+    color: #0a0b0f;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.menu-panel-item.selected .menu-panel-item-icon,
+.menu-panel-item.selected .menu-panel-item-bullet {
+    color: #0a0b0f;
+    opacity: 1;
+}
+
+.menu-panel-item-bullet {
+    font-weight: bold;
+    font-size: 16px;
+    width: 14px;
+    text-align: center;
+    opacity: 0.5;
+    color: rgba(255, 255, 255, 0.5);
+    flex-shrink: 0;
+}
+
+.menu-panel-item-icon {
+    font-size: 15px;
+    opacity: 0.8;
+    width: 18px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.menu-panel-item-label {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.menu-panel-item-chevron {
+    font-size: 12px;
+    width: 14px;
+    opacity: 0.6;
+    flex-shrink: 0;
+}
+
+/* Nested children removed - no sub-trees for page headings */
+.menu-panel-item-children {
+    display: none;
+}
+
+/* ────────────────────── Toggle Button & Splitter ────────────────────── */
+.sidebar-toggle-button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.8);
+    z-index: 1000;
+}
+
+.sidebar-toggle-button:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.sidebar-toggle-button.collapsed {
+    border-radius: 0 6px 6px 0;
+}
+
+.sidebar-toggle-icon {
+    font-size: 16px;
+}
+
+.sidebar-splitter {
+    width: 4px;
+    background: rgba(255, 255, 255, 0.06);
+    cursor: ew-resize;
+    position: relative;
+    flex-shrink: 0;
+    transition: background 0.2s;
+}
+
+.sidebar-splitter:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.sidebar-splitter-hitbox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -5px;
+    right: -5px;
+}
+
+/* Main content */
+.main-content-area {
+    flex: 1;
+    overflow: auto;
+    background: #0a0b0f;
+}
+
+/* Page content styling */
+.page-container {
+    padding: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: rgba(255,255,255,0.9);
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+}
+
+.page-title i {
+    font-size: 36px;
+    color: #4263eb;
+}
+
+.page-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 32px;
+}
+
+.content-section {
+    margin-bottom: 32px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+}
+
+.content-section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.content-section p {
+    line-height: 1.6;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 12px;
+}
+
+.content-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.content-section li {
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+    color: rgba(255,255,255,0.75);
+}
+
+.content-section li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #4263eb;
+    font-weight: bold;
+}
+
+.content-section pre {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 16px;
+    overflow-x: auto;
+    margin-top: 12px;
+}
+
+.content-section code {
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.5;
+}
+
+/* Scrollbar styling */
+.sidebar-menu-content::-webkit-scrollbar,
+.main-content-area::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-menu-content::-webkit-scrollbar-track,
+.main-content-area::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-menu-content::-webkit-scrollbar-thumb,
+.main-content-area::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+}
+
+.sidebar-menu-content::-webkit-scrollbar-thumb:hover,
+.main-content-area::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+}

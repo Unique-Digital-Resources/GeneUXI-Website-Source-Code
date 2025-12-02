@@ -1,0 +1,32 @@
+[application]
+name = "gene_uxi_website"
+default_platform = "web"
+
+[web.app]
+base_path = "/Gene-UXI-Website" # for publishing on github pages where https://github.com/Unique-Digital-Resources/Gene-UXI-Website
+# base_path = "/" for development
+
+# HTML title tag content
+title = "GeneUXI"
+
+assets_dir = "assets"  # Your assets folder
+copy_assets = true  # Copies assets to dist/assets during build
+
+[web.watcher]
+reload_html = true
+watch_path = ["src", "assets"]
+
+# include `assets` in web platform
+[web.resource]
+
+# Additional CSS style files
+style = []
+
+# Additional JavaScript files
+script = []
+
+[web.resource.dev]
+
+# Javascript code file
+# serve: [dev-server] only
+script = []
