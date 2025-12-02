@@ -1,4 +1,4 @@
-![Banner](/_imgs/GeneUXI_banner.png)
+![Banner](/_imgs/GeneUXI_Banner.png)
 
 <div align="center">
   <h1>GeneUXI (Dioxus UI components) Website</h1>
