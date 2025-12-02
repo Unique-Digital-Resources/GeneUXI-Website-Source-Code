@@ -1,4 +1,4 @@
-<!-- Replace with your actual banner URL or relative path -->
+[_imgs/GeneUXI_banner.png]
 
 <div align="center">
   <h1>GeneUXI (Dioxus UI components) Website</h1>
@@ -37,8 +37,6 @@ This repo serves as:
 |     | Collapsible admin sidebar |
 |     | Login / Register modal variants |
 
-*More components coming soon!*
-
 ---
 
 ### 🛠️ Built With
@@ -68,7 +66,7 @@ Ideas → Open an issue → Discuss → Build → PR → Celebrate! 🎉
 
 ### ⭐ Star History
 
-[](https://star-history.com/#YOUR_USERNAME/YOUR_REPO)
+[](https://star-history.com/#Unique-Digital-Resources/GeneUXI-Website-Source-Code)
 
 ---
 
