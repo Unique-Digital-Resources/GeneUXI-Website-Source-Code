@@ -5,7 +5,7 @@
   <p><strong>A visual showcase of reusable UI components, templates, and blocks built with Dioxus (Rust)</strong></p>
 </div>
 
-![Check the website here](https://unique-digital-resources.github.io/Gene-UXI-Website/)
+[Check the website here](https://unique-digital-resources.github.io/Gene-UXI-Website/)
 
 > **⚠️ WARNING: This project is in **early prototype stage** ⚠️**  
 > It is **not production-ready** and is intended only as a **proof-of-concept gallery** and contribution sandbox.  
